@@ -1,0 +1,1 @@
+kafka-console-producer.bat --broker-list localhost:9093 --topic order-topic --producer.config %KAFKA_HOME%\etc\kafka\producer_ssl.properties

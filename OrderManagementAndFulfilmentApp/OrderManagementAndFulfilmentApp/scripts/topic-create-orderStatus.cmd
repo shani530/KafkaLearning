@@ -1,0 +1,1 @@
+kafka-topics.bat --create --zookeeper localhost:2181 --topic orderStatus-topic --partitions 3 --replication-factor 1
