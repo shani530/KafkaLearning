@@ -52,3 +52,8 @@ Tools used :
 3) Apche Kafka
 4) Docker 
 
+Testing steps :
+1) Run the docker-compose.yml by installing the docker.
+2) Run the OrderManagementApp class from IDE.
+3) Run the OrderFulfilmentApp class from IDE.
+
