@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "javaType": "aot.technologies.test.types.OrderItem",
+"properties":
+{
+  "ProductCode":{
+    "type": "integer"
+  },
+  "ProductType": {
+    "type": "String"
+  },
+  "ProductDescripton": {
+    "type": "String"
+  },
+  "ProductQuantity" : {
+    "type": "integer"
+  },
+  "ProductOrderStatus":{
+    "type": "String"
+  }
+}
+
+}

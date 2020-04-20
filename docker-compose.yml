@@ -1,0 +1,43 @@
+ version: '3'
+
+ services:
+
+  zookeeper:
+    image: "wurstmeister/zookeeper"
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+
+  kafka:
+    hostname: 'kafka'
+    image: "wurstmeister/kafka:latest"
+    container_name: kafka
+    depends_on:
+     - zookeeper
+    ports:
+    
+     - "29092:29092"
+     
+    #hostname: kafka
+    volumes:
+      - ./ssl/server.keystore.jks:/ssl/server.keystore.jks
+      - ./ssl/server.truststore.jks:/ssl/server.truststore.jks
+    environment:
+        
+      KAFKA_BROKER_ID: 1
+      KAFKA_PORT: 9092
+      KAFKA_LISTENERS: 'SSL://:9093,PLAINTEXT://:9092,PLAINTEXT_HOST://:29092'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'PLAINTEXT:PLAINTEXT,SSL:SSL,PLAINTEXT_HOST:SSL'
+      KAFKA_ADVERTISED_LISTENERS: 'SSL://:9093,PLAINTEXT://kafka:9092,PLAINTEXT_HOST://192.168.99.100:29092'
+      KAFKA_SECURITY_INTER_BROKER_PROTOCOL: 'SSL'
+      KAFKA_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM: ''
+      KAFKA_SSL_CLIENT_AUTH: 'required'
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+      KAFKA_CREATE_TOPICS: "order-topic:3:1,orderStatus-topic:3:1"
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_SSL_KEYSTORE_LOCATION: '/ssl/server.keystore.jks'
+      KAFKA_SSL_KEYSTORE_PASSWORD: 'test1234'
+      KAFKA_SSL_KEY_PASSWORD: 'test1234'
+      KAFKA_SSL_TRUSTSTORE_LOCATION: '/ssl/server.truststore.jks'
+      KAFKA_SSL_TRUSTSTORE_PASSWORD: 'test1234'
+    
