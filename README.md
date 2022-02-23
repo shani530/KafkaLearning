@@ -1,5 +1,5 @@
-# AOTTechnologies
-Apache Kafka Test
+
+Apache Kafka Usecase
 
 Message definition :
  The  below message data is used for testing purpose. It includes both the orders : Book and Computer as asked in the requirement.
