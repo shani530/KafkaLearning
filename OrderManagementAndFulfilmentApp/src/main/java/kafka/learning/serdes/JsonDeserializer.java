@@ -1,16 +1,15 @@
-package aot.technologies.test.serdes;
+package kafka.learning.serdes;
 
-import aot.technologies.test.types.OrderItem;
+import kafka.learning.types.OrderItem;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.common.errors.SerializationException;
-import org.apache.kafka.common.header.Headers;
 import org.apache.kafka.common.serialization.Deserializer;
 
-import java.io.IOException;
 import java.util.Map;
 
 public class JsonDeserializer<T> implements Deserializer<T> {
     private ObjectMapper objectMapper = new ObjectMapper();
+
     public JsonDeserializer() {
 
     }

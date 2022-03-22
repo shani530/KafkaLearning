@@ -1,6 +1,6 @@
- version: '3'
+version: '3'
 
- services:
+services:
 
   zookeeper:
     image: "wurstmeister/zookeeper"
@@ -13,17 +13,17 @@
     image: "wurstmeister/kafka:latest"
     container_name: kafka
     depends_on:
-     - zookeeper
+      - zookeeper
     ports:
-    
-     - "29092:29092"
-     
+
+      - "29092:29092"
+
     #hostname: kafka
     volumes:
       - ./ssl/server.keystore.jks:/ssl/server.keystore.jks
       - ./ssl/server.truststore.jks:/ssl/server.truststore.jks
     environment:
-        
+
       KAFKA_BROKER_ID: 1
       KAFKA_PORT: 9092
       KAFKA_LISTENERS: 'SSL://:9093,PLAINTEXT://:9092,PLAINTEXT_HOST://:29092'

@@ -1,5 +1,4 @@
-
-package aot.technologies.test.types;
+package kafka.learning.types;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -8,11 +7,11 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "ProductCode",
-    "ProductType",
-    "ProductDescripton",
-    "ProductQuantity",
-    "ProductOrderStatus"
+        "ProductCode",
+        "ProductType",
+        "ProductDescripton",
+        "ProductQuantity",
+        "ProductOrderStatus"
 })
 public class OrderItem {
 
