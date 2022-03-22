@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="jdaconnect-release" />
+      <option name="name" value="jdaconnect-release" />
+      <option name="url" value="https://jdasoftware.jfrog.io/jdasoftware/jdaconnect-release-local" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="anypoint-exchange" />
+      <option name="name" value="Anypoint Exchange" />
+      <option name="url" value="https://maven.anypoint.mulesoft.com/api/v1/maven" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jci-internal" />
+      <option name="name" value="JCI Internal Artifactory" />
+      <option name="url" value="http://artifactory.jda.com/artifactory/JCI-V" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="mulesoft-remote" />
+      <option name="name" value="JDA MuleSoft Repository Proxy" />
+      <option name="url" value="https://jdasoftware.jfrog.io/jdasoftware/list/mulesoft-remote" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-apache-central" />
+      <option name="name" value="Maven Central Repository" />
+      <option name="url" value="http://repo.maven.apache.org/maven2" />
+    </remote-repository>
+  </component>
+</project>
